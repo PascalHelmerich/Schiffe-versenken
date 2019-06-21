@@ -1,0 +1,53 @@
+<div id="content">
+	<div width=420>
+		<h1>Deine Schiffe</h1>
+		<canvas id="myCanvas" width=420 height=500></canvas>
+		<br>
+		<button class="hide" onclick="gameManager.startGame();" id="readyButton">Spiel Starten</button>
+		<p><b>TIPP:</b> Mit "R" kannst du deine Schiffe um 90° drehen</p>
+	</div>
+	
+	<div width=420>
+		<h1>Gegnerische Schiffe</h1>
+		<canvas id="enemyCanvas" width=420 height=420></canvas>
+	</div>
+</div>
+
+<div id="finish">
+	<p>GEWONNEN HAT: <span id="winner"></span></p>
+</div>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Wendy+One');
+
+body{
+font-family: "Wendy One";
+}
+
+#finish{
+	display: none;
+	font-size: 3em;
+	justify-content:center;
+	align-items: center;
+}
+
+.hide {
+display:none;
+}
+
+#content > div > h1{
+	text-align: center;
+}
+
+#content{
+	display:flex;
+	justify-content: space-around;
+}
+</style>
+
+<script src="ship.js"></script>
+<script src="canvasmanager.js"></script>
+<script src="enemylogic.js"></script>
+<script src="shipmanager.js"></script>
+<script src="gamemanager.js"></script>
